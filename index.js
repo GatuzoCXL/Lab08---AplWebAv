@@ -1,14 +1,14 @@
-const http = require('http');
-require('dotenv').config();
+require('dotenv').config()
+const http= require('http')
 
-const port = process.env.PORT || 3000;
+function requestController(){
+    console.log('Bienvenidos al curso de Mandarinas')
+}
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/html');
-    res.end('<h1>¡Hola Mundo desde Node.js!</h1>');
-});
+const server=http.createServer(requestController)
 
-server.listen(port, () => {
-    console.log(`El servidor está corriendo en http://localhost:${port}`);
-});
+const PORT=process.env.PORT
+
+server.listen(PORT, function(){
+    console.log("Aplicacion corriendo en: " + PORT)
+})

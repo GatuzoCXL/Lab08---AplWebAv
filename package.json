@@ -1,0 +1,15 @@
+{
+  "name": "desplegando-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "GatuzoCXL <tkmlc29@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "devDependencies": {
+    "dotenv": "^16.5.0",
+    "nodemon": "^3.1.10"
+  }
+}
