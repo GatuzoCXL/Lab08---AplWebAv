@@ -1,0 +1,14 @@
+const http = require('http');
+require('dotenv').config();
+
+const port = process.env.PORT || 3000;
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html');
+    res.end('<h1>¡Hola Mundo desde Node.js!</h1>');
+});
+
+server.listen(port, () => {
+    console.log(`El servidor está corriendo en http://localhost:${port}`);
+});
